@@ -1,0 +1,17 @@
+[package]
+name = "uenv_cli"
+description = "Unified Environment CLI"
+version.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+edition.workspace    = true
+repository.workspace = true
+homepage.workspace   = true
+categories.workspace = true
+keywords.workspace   = true
+
+[[bin]]
+name = "uenv"
+path = "src/main.rs"
+
+[dependencies]
