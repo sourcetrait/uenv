@@ -16,3 +16,4 @@ categories = []
 keywords = ["sourcetrait", "uenv", "environment", "env"]
 
 [workspace.dependencies]
+shellexpand = { version = "3", features = ["full"] }

@@ -13,11 +13,11 @@ Have questions, concerns, ideas, or requests?
 Upvote an existing discussion or create one if not found.
 
 ### Contributors
-Contributors, please review [SOURCETRAIT.md](./SOURCETRAIT.md).  
+Contributors, please review [SOURCETRAIT.md](https://github.com/sourcetrait/sourcetrait_common/blob/dev/SOURCETRAIT.md).  
 
 #### Copyright Assignment Agreement (CAA)
 By committing to this repository you
-[agree to assign](./docs/legal/Copyright_Assignment_Agreement.md)
+[agree to assign](https://github.com/sourcetrait/sourcetrait_common/blob/dev/docs/legal/Copyright_Assignment_Agreement.md)
 to [Asmov LLC](https://asmov.software)
 all right, title, and interest worldwide in all copyright covering your
 contribution.
