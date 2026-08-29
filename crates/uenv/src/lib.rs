@@ -4,9 +4,17 @@ pub mod spec {
         pub mod linux;
     }
 }
+pub(crate) mod os;
 pub(crate) mod lookup;
 pub(crate) mod enums;
+pub mod sys;
+pub mod prelude;
 //pub(crate) mod uenv;
+
+pub(crate) use crate::{
+    prelude::*,
+    os::*,
+};
 
 pub use crate::{
     enums::*,
@@ -17,6 +25,7 @@ pub use crate::{
 pub(crate) use std::{
     borrow::Cow,
     env,
+    mem,
     ffi::{OsStr,OsString},
     path::{self, PathBuf, Path},
     str::FromStr,

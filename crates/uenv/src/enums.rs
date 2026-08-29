@@ -54,6 +54,22 @@ impl AsRef<str> for Sys {
     fn as_ref(&self) -> &str { self.name() }
 }
 
+impl<'a> TryFrom<&'a str> for Var {
+    type Error = &'a str;
+
+    fn try_from(value: &'a str) -> Result<Self, Self::Error> {
+        Err(value) //todo
+    }
+}
+
+impl TryFrom<Sys> for Var {
+    type Error = Sys;
+
+    fn try_from(value: Sys) -> Result<Self, Self::Error> {
+        Err(value) // todo
+    }
+}
+
 /// User Directories: Internal software operation
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
@@ -215,3 +231,18 @@ impl FromStr for Var {
     }
 }
 
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct SpecVal {
+    pub val: Val,
+    pub fell: Option<Var>,
+    pub standards: Vec<Standard>,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum Standard {
+    Owner(User),
+    OwnerGroup(Group),
+    Owners(User, Group),
+    Permissions(Permissions),
+    Capabilities(Vec<Capability>),
+}
